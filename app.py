@@ -21,7 +21,8 @@ from transformers import pipeline
 
 model = pipeline('fill-mask', model='bert-base-uncased')
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 app.secret_key = "esra"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///history.sqlite3'
